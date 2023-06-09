@@ -3,20 +3,17 @@ services:
   app: 
     build: .
     container_name: go
-
     env_file:
-    - .env
-    #a command that keeps restarting the container until
+      - .env
+    # this option keeps restarting the container until
     #it,s connectd succseefly to the database container
-    restart: always  
-
+    restart: always
     ports:
       - 80:9090
-        
     depends_on:
       - db
-    links:
-      - "db"
+    volumes:
+      - app-data:/app/data
 
   db:
     image: mysql:latest
@@ -28,5 +25,9 @@ services:
       MYSQL_PASSWORD: instabug_DevOps
     ports:
       - 3306:3306
+    volumes:
+      - db-data:/var/lib/mysql
 
-      
+volumes:
+  app-data:
+  db-data:
