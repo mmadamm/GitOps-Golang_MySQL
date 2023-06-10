@@ -1,0 +1,51 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: instaap
+  labels:
+    app: instaap
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: instaap
+  template:
+    metadata:
+      labels:
+        app: instaap
+    spec:
+      containers:
+      - name: instaap
+        image: adam4devops/insta-app:latest
+        imagePullPolicy: IfNotPresent
+        ports:
+        - containerPort: 9090
+        env:
+        - name: MYSQL_USER
+          valueFrom:
+            secretKeyRef:
+              name: mysql-credentials
+              key: user
+        - name: MYSQL_PASS
+          valueFrom: 
+            secretKeyRef:
+              name: mysql-credentials
+              key: password
+        - name: MYSQL_PORT
+          valueFrom: 
+            secretKeyRef:
+              name: mysql-credentials
+              key: port  
+              
+        - name: MYSQL_HOST
+          valueFrom: 
+            configMapKeyRef:
+              name: hostname
+              key: database_url
+        readinessProbe:
+          httpGet:
+            path: /healthcheck
+            port: 9090
+          initialDelaySeconds: 5
+          periodSeconds: 10
+          failureThreshold: 3

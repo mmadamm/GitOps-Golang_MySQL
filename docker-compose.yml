@@ -18,11 +18,8 @@ services:
   db:
     image: mysql:latest
     container_name: db
-    environment:
-      MYSQL_ROOT_PASSWORD: instabug_DevOps
-      MYSQL_DATABASE: internship
-      MYSQL_USER: instabug
-      MYSQL_PASSWORD: instabug_DevOps
+    env_file:
+      - db.env     
     ports:
       - 3306:3306
     volumes:
