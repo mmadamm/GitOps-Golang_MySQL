@@ -1,0 +1,51 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{.values.appName}}
+  labels:
+    app: {{.values.appName}}
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: {{.values.appName}}
+  template:
+    metadata:
+      labels:
+        app: {{.values.appName}}
+    spec:
+      containers:
+      - name: {{.values.appName}}
+        image: {{.values.containerlink}}
+        imagePullPolicy: IfNotPresent
+        ports:
+        - containerPort: 9090
+        env: 
+        - name: MYSQL_USER
+          valueFrom:
+            secretKeyRef:
+              name: mysql-credentials
+              key: user
+        - name: MYSQL_PASS
+          valueFrom: 
+            secretKeyRef:
+              name: mysql-credentials
+              key: password
+        - name: MYSQL_PORT
+          valueFrom: 
+            secretKeyRef:
+              name: mysql-credentials
+              key: port  
+              
+        - name: MYSQL_HOST
+          valueFrom: 
+            configMapKeyRef:
+              name: hostname
+              key: database_url
+        readinessProbe:
+          httpGet:
+            path: /healthcheck
+            port: 9090
+          initialDelaySeconds: 20
+          periodSeconds: 10
+          failureThreshold: 3
