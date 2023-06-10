@@ -24,8 +24,49 @@
 
 
 ## Screenshots of the running app on local and Production
-1.photo of the image after compression
+1. Photo of the docker image after compression to (14.7mg)
+
 ![](assets/images/00-image-size.png)
+
+2. Docker-compose working fine.
+
+![](assets/images/01-Docker-compose-working.png)
+
+3. Deploying the App in K8s successfully.
+
+![](assets/images/02-Deploying-the-app-in-k8s.png)
+
+4. Testing the "POST" request.
+
+![](assets/images/03-testing the post api .png)
+
+5. Testing the "GET" request after fixing it 
+
+![](assets/images/04-GET after fixing.png)
+
+6. A sample to test the PATCH request(Before).
+
+![](assets/images/06-before PATCH.png)
+
+7. Testing The PATCH request
+
+![](assets/images/05-PATCH .png)
+
+8. After the PATCH request
+
+![](assets/images/07-After PATCH.png)
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
