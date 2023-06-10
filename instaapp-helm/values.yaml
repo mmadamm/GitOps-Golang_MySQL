@@ -1,2 +1,3 @@
+replicas: 5
 appName: mynewapp
 containerlink: whatever-the-new-version
