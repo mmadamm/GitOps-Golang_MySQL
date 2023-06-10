@@ -1,0 +1,10 @@
+resources:
+  - ./conf/secrets.yaml
+  - ./conf/configmap.yaml
+  - ./database/pv.yaml
+  - ./database/pvc.yaml
+  - ./database/mysql_deployment.yaml
+  - ./database/db-src.yaml
+  - ./app/app-src.yaml
+  - ./app/instaap_deployment.yaml
+  - ./app/autoscaling.yaml

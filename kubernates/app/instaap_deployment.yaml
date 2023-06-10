@@ -46,6 +46,6 @@ spec:
           httpGet:
             path: /healthcheck
             port: 9090
-          initialDelaySeconds: 5
+          initialDelaySeconds: 20
           periodSeconds: 10
           failureThreshold: 3
