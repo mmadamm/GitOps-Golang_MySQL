@@ -5,7 +5,8 @@ services:
     container_name: go
     env_file:
       - .env
-    # this option keeps restarting the container until the db is ready and healthy, insted of making health check on both of them ,
+    # this option keeps restarting the container until the db is ready and healthy,
+    # insted of making health check on both of them ,
     # i think it,s good for this tiny app and do the job as required 
     restart: always
     ports:
