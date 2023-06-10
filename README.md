@@ -38,23 +38,23 @@
 
 4. Testing the "POST" request.
 
-![](assets/images/03-testing the post api .png)
+![](assets/images/03-testing-the-post-api.png)
 
 5. Testing the "GET" request after fixing it 
 
-![](assets/images/04-GET after fixing.png)
+![](assets/images/04-GET-after-fixing.png)
 
 6. A sample to test the PATCH request(Before).
 
-![](assets/images/06-before PATCH.png)
+![](assets/images/06-before-PATCH.png)
 
-7. Testing The PATCH request
+7. Testing The-PATCH-request
 
-![](assets/images/05-PATCH .png)
+![](assets/images/05-PATCH.png)
 
 8. After the PATCH request
 
-![](assets/images/07-After PATCH.png)
+![](assets/images/07-After-PATCH.png)
 
 
 
