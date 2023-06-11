@@ -11,12 +11,15 @@ spec:
     targetRevision: HEAD
     directory:
       recurse: true
+    helm:
+      valueFiles:
+      - values.yaml
   destination:
     server: https://kubernetes.default.svc
     namespace: instaap
   syncPolicy:
     syncOptions:
-    -CreateNamespace=true
+    - CreateNamespace=true
     automated:
       prune: true
       selfHeal: true
