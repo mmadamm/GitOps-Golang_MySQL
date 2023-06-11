@@ -58,7 +58,7 @@
 
 
 
-##ArgoCD with helmcharts 
+## ArgoCD with helmcharts 
 
 1. ArgoCD is working well in kubernates 
 
