@@ -4,7 +4,7 @@ metadata:
   name: instaap-service
 spec:
   selector:
-    app: {{.values.appName}}
+    app: instaap
   type: LoadBalancer
   ports:
     - protocol: TCP

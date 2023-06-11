@@ -1,3 +1,1 @@
-replicas: 5
-appName: mynewapp
-containerlink: whatever-the-new-version
+replicas: 2

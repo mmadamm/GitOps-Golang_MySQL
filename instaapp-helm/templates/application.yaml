@@ -11,8 +11,8 @@ metadata:
 spec:
   project: default
   source:
-    repoURL: https://github.com/AdamAFD/Instabug-Infrastructure-Internship-Challenge/tree/main/instaapp-helm/templates
-    path: kubernetes
+    repoURL: https://github.com/AdamAFD/Instabug-Infrastructure-Internship-Challenge/tree/main/instaapp-helm
+    path: templates
     targetRevision: HEAD
     directory:
       recurse: true
@@ -20,6 +20,8 @@ spec:
     server: 'https://kubernetes.default.svc'
     namespace: instaap
   syncPolicy:
+    syncOptions:
+    -CreateNamespace=true
     automated:
       prune: true
       selfHeal: true

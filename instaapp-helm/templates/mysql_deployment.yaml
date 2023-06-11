@@ -1,10 +1,9 @@
 apiVersion: apps/v1
-kind: StatefulSet 
+kind: Deployment
 metadata:
   name: mysql
 spec:
   replicas: 1
-  serviceName: mysql
   selector:
     matchLabels:
       app: mysql
@@ -47,4 +46,3 @@ spec:
       - name: mysql-data
         persistentVolumeClaim:
           claimName: mysql-pvc
-     
