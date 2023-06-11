@@ -18,7 +18,7 @@
 
 ## Bunes tasks that i have implemented.
     1. Adding an autoscaling manifest for the number of replicas.
-    2. Adding an argocd app that points to helm manifests to apply GitOps concept.
+    2. Adding an ArgoCD app that points to helm manifests to apply GitOps concept.
     3. Using non-root user to add security to the container.
     4. Fixing a bug in the main.go => "GET" request.
 
@@ -55,6 +55,30 @@
 8. After the PATCH request
 
 ![](assets/images/07-After-PATCH.png)
+
+
+
+##ArgoCD with helmcharts 
+
+1. ArgoCD is working well in kubernates 
+
+![](assets/images/08-argocd-is-runnung.png)
+
+
+2. ArgoCD working deployment after updating helmcharts
+
+
+![](assets/images/09-argocd-afterupdating-number-of-replicas.png)
+
+
+3. Ensuring that the application working as expected
+
+
+![](assets/images/10-ensuring-that-the-svc-working.png)
+
+
+4. The End ,I hope :D
+
 
 
 
