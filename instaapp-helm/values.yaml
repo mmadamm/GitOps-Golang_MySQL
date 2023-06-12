@@ -1,11 +1,15 @@
 #changing the repo and the tage 
 image:
-  repository: adam4devops/insta-app
+  repo: adam4devops/insta-app
   tag: latest
 
 #adding config to support high availability
 replicaCount: 3
 
+
+#adding config to support high volume persistence
+
+PersistenceVol.size: 3Gi
 
 
 
