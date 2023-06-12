@@ -5,7 +5,7 @@ metadata:
   labels:
     app: instaap
 spec:
-  replicas: {{ .Values.replicaCount }}
+  replicas: {{ .Values.app-replicaCount }}
   selector:
     matchLabels:
       app: instaap

@@ -4,7 +4,9 @@ image:
   tag: latest
 
 #adding config to support high availability
-replicaCount: 3
+app-replicaCount: 3
+
+db-replicaCount: 3 
 
 
 #adding config to support high volume persistence
