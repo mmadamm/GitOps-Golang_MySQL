@@ -3,7 +3,7 @@ image:
   repo: adam4devops/insta-app
   tag: latest
 
-#adding config to support high availability for application and db 
+#adding config to support high availability
 app-replicaCount: 3
 
 db-replicaCount: 3 
@@ -23,19 +23,3 @@ app-service:
   type: LoadBalancer  #for Public     , ClusterIP   for Private  
   port: 80
   targetport: 9090
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
