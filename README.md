@@ -28,7 +28,7 @@
 
 ![](assets/images/00-image-size.png)
 
-2. Docker-compose working fine.
+2. Docker-compose is working fine.
 
 ![](assets/images/01-Docker-compose-working.png)
 
@@ -44,15 +44,15 @@
 
 ![](assets/images/04-GET-after-fixing.png)
 
-6. A sample to test the PATCH request(Before).
+6. A sample to test the "PATCH" request(Before).
 
 ![](assets/images/06-before-PATCH.png)
 
-7. Testing The-PATCH-request
+7. Testing The "PATCH" request
 
 ![](assets/images/05-PATCH.png)
 
-8. After the PATCH request
+8. After the "PATCH" request
 
 ![](assets/images/07-After-PATCH.png)
 
@@ -65,19 +65,19 @@
 ![](assets/images/08-argocd-is-runnung.png)
 
 
-2. ArgoCD working deployment after updating helmcharts
+2. ArgoCD is working deployment after updating helmcharts
 
 
 ![](assets/images/09-argocd-afterupdating-number-of-replicas.png)
 
 
-3. Ensuring that the application working as expected
+3. Ensuring that the application is working as expected
 
 
 ![](assets/images/10-ensuring-that-the-svc-working.png)
 
 
-4. The End ,I hope :D
+4. The End , I hope :D 
 
 
 

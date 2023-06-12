@@ -3,7 +3,7 @@ image:
   repo: adam4devops/insta-app
   tag: latest
 
-#adding config to support high availability
+#adding config to support high availability for application and db 
 app-replicaCount: 3
 
 db-replicaCount: 3 
