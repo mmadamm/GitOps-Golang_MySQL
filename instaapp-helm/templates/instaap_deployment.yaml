@@ -5,7 +5,7 @@ metadata:
   labels:
     app: instaap
 spec:
-  replicas: instaap
+  replicas: {{ .Values.replicaCount }}
   selector:
     matchLabels:
       app: instaap
@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: instaap
-        image: adam4devops/insta-app:latest
+        image: {{ .Values.image.repo }} : {{ .Values.image.tag }}
         imagePullPolicy: IfNotPresent
         ports:
         - containerPort: 9090
