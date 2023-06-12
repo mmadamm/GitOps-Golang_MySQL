@@ -7,4 +7,4 @@ spec:
     - ReadWriteOnce
   resources:
     requests:
-      storage: {{ .Values.PersistenceVol.size }}
+      storage: {{ .Values.PersistenceVol.claimsize }}

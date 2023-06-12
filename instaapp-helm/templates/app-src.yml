@@ -5,8 +5,8 @@ metadata:
 spec:
   selector:
     app: instaap
-  type: LoadBalancer
+  type: {{ .Values.app-service.type }}
   ports:
     - protocol: TCP
-      port: 80
-      targetPort: 9090
+      port: {{ .Values.app-service.port }}
+      targetPort: {{ .Values.app-service.targetport }}

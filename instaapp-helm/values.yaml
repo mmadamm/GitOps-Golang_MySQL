@@ -1,4 +1,4 @@
-#changing the repo and the tage 
+#changing the repo and the tag 
 image:
   repo: adam4devops/insta-app
   tag: latest
@@ -9,7 +9,19 @@ replicaCount: 3
 
 #adding config to support high volume persistence
 
-PersistenceVol.size: 3Gi
+PersistenceVol:
+    size: 3Gi
+    claimsize : 2Gi
+
+
+#adding config to support exposing service to the public
+
+app-service:
+
+  type: LoadBalancer  #for Public     , ClusterIP   for Private  
+  port: 80
+  targetport: 9090
+
 
 
 
