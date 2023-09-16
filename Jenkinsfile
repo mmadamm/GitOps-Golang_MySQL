@@ -1,32 +1,17 @@
 pipeline {
     agent any
     environment{
-        DOCKERHUB_CREDENTIALS = credentials("DockerHub")
-        GIT_COMMIT_NUMBER = sh(returnStdout: true, script: "git rev-parse --short=10 HEAD").trim()
+        DOCKERHUB_CREDENTIALS = credentials("docker-hub")
     }
     stages {
-        stage ("git checkout"){
-            steps {
-                git 'https://github.com/AdamAFD/GitOps-Golang_MySQL'
-            }
-        }
+        
         stage("build image"){
             steps {
-                sh "docker build -t adam4devops/insta-app:${env.GIT_COMMIT_NUMBER} -t adam4devops/insta-app:latest ."
-            }
-        }
-        stage("dockerhub login"){
-            steps{
+                sh 'docker build -t adam4devops/insta-app:v1'
                 sh " echo $DOCKERHUB_CREDENTIALS_PSW | docker login -u $DOCKERHUB_CREDENTIALS_USR --password-stdin"
-            }
+                sh 'docker push adam4devops/insta-app:v1'
         }
-        stage("push image"){
-            steps{
-                sh "docker push adam4devops/insta-app:${env.GIT_COMMIT_NUMBER}"
-                sh "docker push adam4devops/insta-app:latest"
-            }
-        }
-       
+        
     post {
         always{
             sh "docker logout"
@@ -37,5 +22,6 @@ pipeline {
             body: "Build Failed"
         }
 	}
+}
 }
 }
