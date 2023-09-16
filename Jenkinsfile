@@ -7,7 +7,7 @@ pipeline {
     stages {
         stage ("git checkout"){
             steps {
-                git 'https://github.com/AdamAFD/Instabug-Infrastructure-Internship-Challenge'
+                git 'https://github.com/AdamAFD/GitOps-Golang_MySQL'
             }
         }
         stage("build image"){
