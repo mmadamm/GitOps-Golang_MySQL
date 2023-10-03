@@ -1,0 +1,16 @@
+version: '3'
+services:
+jenkins-docker:
+image: jenkins/jenkins:lts
+container_name: jenkins-docker
+user: root
+privileged: true
+ports:
+- "8080:8080"
+- "50000:50000"
+volumes:
+- /var/run/docker.sock:/var/run/docker.sock
+- jenkins_home:/var/jenkins_home
+- /usr/bin/docker:/usr/bin/docker
+volumes:
+jenkins_home:
