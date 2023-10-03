@@ -6,7 +6,7 @@ metadata:
 spec:
   project: default
   source:
-    repoURL: https://github.com/AdamAFD/Instabug-Infrastructure-Internship-Challenge/tree/main/instaapp-helm
+    repoURL: https://github.com/AdamAFD/GitOps-Golang_MySQL 
     path: templates
     targetRevision: HEAD
     directory:
