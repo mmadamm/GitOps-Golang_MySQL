@@ -1,4 +1,4 @@
-# Instabug-Infrastructure-Internship-Challenge 2023
+# GitOps-Golang_MySQL
 
 ## What I have done so far
 1. Dockerizing the API GoLang app
